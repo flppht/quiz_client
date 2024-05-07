@@ -40,7 +40,7 @@ const CreateQuiz = () => {
   };
 
   return (
-    <div className="mt-12">
+    <div className="createQuizContainer">
       <Formik
         initialValues={initialValues}
         onSubmit={onSubmit}
@@ -61,7 +61,7 @@ const CreateQuiz = () => {
 
           <button
             type="submit"
-            className="bg-slate-600 rounded-md p-2 text-white mt-4"
+            className="bg-slate-500 rounded-md p-2 text-white mt-4"
           >
             Create quiz
           </button>
