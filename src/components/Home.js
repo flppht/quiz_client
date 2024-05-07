@@ -5,9 +5,9 @@ const Home = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   return (
-    <div className="welcomeContainer flex flex-col items-center mt-20">
+    <div className="welcomeContainer mt-20">
       {!isVisible && (
-        <>
+        <div className="flex flex-col items-center">
           <p className="font-semibold">Welcome to the Quiz App</p>
           <p className="mt-2">To create a quiz press the button</p>
           <button
@@ -17,7 +17,7 @@ const Home = () => {
           >
             Create
           </button>
-        </>
+        </div>
       )}
       {isVisible && <CreateQuiz />}
     </div>

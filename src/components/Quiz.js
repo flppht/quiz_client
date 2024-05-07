@@ -40,7 +40,7 @@ const Quiz = () => {
   };
 
   return (
-    <div className="mt-5 w-96 flex flex-col items-center">
+    <div className="mt-5 w-96 flex flex-col">
       {console.log(selectedAnswers)}
       {listOfQuestions.map((q, index) => (
         <div className="">
@@ -74,7 +74,7 @@ const Quiz = () => {
       <button
         onClick={onClick}
         type="button"
-        className="rounded bg-slate-500 mt-2 py-1 px-2 text-white w-1/2 "
+        className="rounded bg-slate-500 mt-2 py-1 px-2 text-white w-1/2 self-center"
       >
         Submit answers
       </button>
@@ -86,15 +86,22 @@ const Quiz = () => {
           </div>
           {correctAnswers === listOfQuestions.length && (
             <span>
-              Congratulations! You have answered all the questions right!
+              Congratulations!
+              <br /> You have answered all the questions right!
             </span>
           )}
           {correctAnswers / listOfQuestions.length >= 0.5 &&
             !(correctAnswers === listOfQuestions.length) && (
-              <span>You can do it better! Try again.</span>
+              <span>
+                You can do it better! <br />
+                Try again.
+              </span>
             )}
           {correctAnswers / listOfQuestions.length < 0.5 && (
-            <span>Arghh. You have to study more.</span>
+            <span>
+              Arghh.
+              <br /> You have to study more.
+            </span>
           )}
         </div>
       )}
